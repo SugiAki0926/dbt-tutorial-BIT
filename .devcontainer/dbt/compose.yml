@@ -5,8 +5,11 @@ services:
       dockerfile: .devcontainer/dbt/Dockerfile
     volumes:
       - ../..:/workspaces/dbt-tutorial-BIT:cached
-      - ${HOME}/.dbt:/root/.dbt-host:ro
-      - ${HOME}/.ssh:/root/.ssh:ro
+      # for snowflake key pairs authentication
+      - ${HOME}/.ssh/snowflake-btc-rsa_key.p8:/root/.ssh/snowflake-btc-rsa_key.p8
+    env_file:
+      - path: ../../.env
+        required: false
     environment:
-      DBT_PROFILES_DIR: /root/.dbt
+      DBT_PROFILES_DIR: /workspaces/dbt-tutorial-BIT/.dbt
     command: sleep infinity
