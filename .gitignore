@@ -1,0 +1,39 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+*.pyo
+build/
+dist/
+wheels/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+
+# dbt
+target/
+dbt_packages/
+logs/
+*.log
+.user.yml
+
+# Snowflake / credentials
+profiles.yml
+.env
+.env.*
+*.p8
+*.pem
+*.key
+rsa_key*
+snowflake*key*
+.snowsql/
+.snowflake/
+
+# OS / editor
+.DS_Store
+.idea/
