@@ -1,0 +1,4 @@
+.venv/
+BTC/dbt_packages/
+BTC/logs/
+BTC/target/

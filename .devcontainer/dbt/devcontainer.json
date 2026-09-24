@@ -9,14 +9,47 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
+        "charliermarsh.ruff",
         "samuelcolvin.jinjahtml",
-        "altimateai.vscode-altimate-mcp-server",
-        "innoverio.vscode-dbt-power-user"
+        "innoverio.vscode-dbt-power-user",
+        "dorzey.vscode-sqlfluff"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/workspaces/dbt-tutorial-BIT/.venv/bin/python",
         "dbt.dbtPythonPathOverride": "/workspaces/dbt-tutorial-BIT/.venv/bin/python",
-        "dbt.dbtIntegration": "core"
+        "dbt.dbtIntegration": "core",
+        "ruff.path": [
+          "/workspaces/dbt-tutorial-BIT/.venv/bin/ruff"
+        ],
+        "sqlfluff.executablePath": "/workspaces/dbt-tutorial-BIT/.venv/bin/sqlfluff",
+        "sqlfluff.config": "/workspaces/dbt-tutorial-BIT/.sqlfluff",
+        "sqlfluff.linter.run": "onSave",
+        "sqlfluff.experimental.format.executeInTerminal": true,
+        "sqlfluff.format.enabled": true,
+        "[python]": {
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+          }
+        },
+        "[sql]": {
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+          },
+          "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+        },
+        "[jinja-sql]": {
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+          },
+          "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+        }
       }
     }
   }
