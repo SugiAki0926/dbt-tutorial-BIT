@@ -11,13 +11,3 @@ BTC:
       warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
       private_key_path: "{{ env_var('DBT_SNOWFLAKE_PRIVATE_KEY_PATH') }}"
       threads: 1
-    prod:
-      type: snowflake
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      schema: "{{ env_var('DBT_SNOWFLAKE_PROD_SCHEMA') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
-      private_key_path: "{{ env_var('DBT_SNOWFLAKE_PRIVATE_KEY_PATH') }}"
-      threads: 1

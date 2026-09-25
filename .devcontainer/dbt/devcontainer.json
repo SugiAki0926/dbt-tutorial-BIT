@@ -23,9 +23,8 @@
         ],
         "sqlfluff.executablePath": "/workspaces/dbt-tutorial-BIT/.venv/bin/sqlfluff",
         "sqlfluff.config": "/workspaces/dbt-tutorial-BIT/.sqlfluff",
-        "sqlfluff.linter.run": "onSave",
-        "sqlfluff.experimental.format.executeInTerminal": true,
-        "sqlfluff.format.enabled": true,
+        "sqlfluff.linter.run": "off",
+        "sqlfluff.format.enabled": false,
         "[python]": {
           "editor.formatOnSave": true,
           "editor.defaultFormatter": "charliermarsh.ruff",
@@ -35,20 +34,10 @@
           }
         },
         "[sql]": {
-          "editor.formatOnSave": true,
-          "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-          },
-          "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+          "editor.formatOnSave": false
         },
         "[jinja-sql]": {
-          "editor.formatOnSave": true,
-          "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-          },
-          "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
+          "editor.formatOnSave": false
         }
       }
     }

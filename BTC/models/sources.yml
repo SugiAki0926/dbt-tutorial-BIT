@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: btc
+    database: btc
+    schema: btc_schema
+    tables:
+      - name: btc
+        freshness:
+          warn_after:
+            count: 1 # 1 hour
+            period: hour
+          error_after:
+            count: 3 # 3 hours
+            period: hour
+        loaded_at_field: BLOCK_TIMESTAMP

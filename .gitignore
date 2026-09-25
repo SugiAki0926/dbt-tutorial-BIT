@@ -1,5 +1,6 @@
 .cursor/
 docs/
+!.dbt/profiles.yml.sample
 
 # Python-generated files
 __pycache__/
